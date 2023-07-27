@@ -10,10 +10,13 @@
 		5FE11B0780F4057742E72086 /* Pods_TODO_Refactor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */; };
 		EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A12A722A0500A5A752 /* AppDelegate.swift */; };
 		EB16D9A42A722A0500A5A752 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */; };
-		EB16D9A62A722A0500A5A752 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A52A722A0500A5A752 /* ViewController.swift */; };
 		EB16D9A92A722A0500A5A752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9A72A722A0500A5A752 /* Main.storyboard */; };
 		EB16D9AB2A722A0700A5A752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AA2A722A0700A5A752 /* Assets.xcassets */; };
 		EB16D9AE2A722A0700A5A752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AC2A722A0700A5A752 /* LaunchScreen.storyboard */; };
+		EB2865EF2A7230E200064523 /* Roboto(2) in Resources */ = {isa = PBXBuildFile; fileRef = EB2865EE2A7230E200064523 /* Roboto(2) */; };
+		EB2865F32A7235B800064523 /* inter in Resources */ = {isa = PBXBuildFile; fileRef = EB2865F22A7235B800064523 /* inter */; };
+		EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865F52A7238B900064523 /* CoustomColor.swift */; };
+		EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865F92A723FE100064523 /* CoustomFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		EB16D99E2A722A0500A5A752 /* TODO-Refactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-Refactor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB16D9A12A722A0500A5A752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB16D9A52A722A0500A5A752 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB16D9A82A722A0500A5A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB16D9AA2A722A0700A5A752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB16D9AD2A722A0700A5A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB16D9AF2A722A0700A5A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB2865EE2A7230E200064523 /* Roboto(2) */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Roboto(2)"; sourceTree = "<group>"; };
+		EB2865F22A7235B800064523 /* inter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inter; sourceTree = "<group>"; };
+		EB2865F52A7238B900064523 /* CoustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomColor.swift; sourceTree = "<group>"; };
+		EB2865F92A723FE100064523 /* CoustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomFont.swift; sourceTree = "<group>"; };
 		F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_Refactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.release.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +62,6 @@
 				DA1488504C75AB3333225A71 /* Pods-TODO-Refactor.debug.xcconfig */,
 				FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +86,42 @@
 		EB16D9A02A722A0500A5A752 /* TODO-Refactor */ = {
 			isa = PBXGroup;
 			children = (
-				EB16D9A12A722A0500A5A752 /* AppDelegate.swift */,
-				EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */,
-				EB16D9A52A722A0500A5A752 /* ViewController.swift */,
-				EB16D9A72A722A0500A5A752 /* Main.storyboard */,
-				EB16D9AA2A722A0700A5A752 /* Assets.xcassets */,
-				EB16D9AC2A722A0700A5A752 /* LaunchScreen.storyboard */,
+				EB2865F42A72387C00064523 /* CoustomUI */,
+				EB2865D22A7230A800064523 /* BaseFile */,
 				EB16D9AF2A722A0700A5A752 /* Info.plist */,
 			);
 			path = "TODO-Refactor";
+			sourceTree = "<group>";
+		};
+		EB2865D12A7230A100064523 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EB2865F22A7235B800064523 /* inter */,
+				EB2865EE2A7230E200064523 /* Roboto(2) */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EB2865D22A7230A800064523 /* BaseFile */ = {
+			isa = PBXGroup;
+			children = (
+				EB16D9A12A722A0500A5A752 /* AppDelegate.swift */,
+				EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */,
+				EB16D9A72A722A0500A5A752 /* Main.storyboard */,
+				EB16D9AA2A722A0700A5A752 /* Assets.xcassets */,
+				EB16D9AC2A722A0700A5A752 /* LaunchScreen.storyboard */,
+			);
+			path = BaseFile;
+			sourceTree = "<group>";
+		};
+		EB2865F42A72387C00064523 /* CoustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				EB2865D12A7230A100064523 /* Fonts */,
+				EB2865F52A7238B900064523 /* CoustomColor.swift */,
+				EB2865F92A723FE100064523 /* CoustomFont.swift */,
+			);
+			path = CoustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +186,8 @@
 			files = (
 				EB16D9AE2A722A0700A5A752 /* LaunchScreen.storyboard in Resources */,
 				EB16D9AB2A722A0700A5A752 /* Assets.xcassets in Resources */,
+				EB2865EF2A7230E200064523 /* Roboto(2) in Resources */,
+				EB2865F32A7235B800064523 /* inter in Resources */,
 				EB16D9A92A722A0500A5A752 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB16D9A62A722A0500A5A752 /* ViewController.swift in Sources */,
+				EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */,
+				EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */,
 				EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */,
 				EB16D9A42A722A0500A5A752 /* SceneDelegate.swift in Sources */,
 			);
