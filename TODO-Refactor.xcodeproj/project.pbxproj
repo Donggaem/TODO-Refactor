@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FE11B0780F4057742E72086 /* Pods_TODO_Refactor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */; };
 		EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A12A722A0500A5A752 /* AppDelegate.swift */; };
 		EB16D9A42A722A0500A5A752 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */; };
 		EB16D9A62A722A0500A5A752 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16D9A52A722A0500A5A752 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1488504C75AB3333225A71 /* Pods-TODO-Refactor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.debug.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.debug.xcconfig"; sourceTree = "<group>"; };
 		EB16D99E2A722A0500A5A752 /* TODO-Refactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-Refactor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB16D9A12A722A0500A5A752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB16D9A32A722A0500A5A752 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		EB16D9AA2A722A0700A5A752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB16D9AD2A722A0700A5A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB16D9AF2A722A0700A5A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_Refactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.release.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE11B0780F4057742E72086 /* Pods_TODO_Refactor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		587DE25C9823A7D59D6786E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF104A0EBFA0C90772BAF549 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA1488504C75AB3333225A71 /* Pods-TODO-Refactor.debug.xcconfig */,
+				FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB16D9952A722A0500A5A752 = {
 			isa = PBXGroup;
 			children = (
 				EB16D9A02A722A0500A5A752 /* TODO-Refactor */,
 				EB16D99F2A722A0500A5A752 /* Products */,
+				CF104A0EBFA0C90772BAF549 /* Pods */,
+				587DE25C9823A7D59D6786E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB16D9B22A722A0700A5A752 /* Build configuration list for PBXNativeTarget "TODO-Refactor" */;
 			buildPhases = (
+				2803E9081E109F6BBDC39121 /* [CP] Check Pods Manifest.lock */,
 				EB16D99A2A722A0500A5A752 /* Sources */,
 				EB16D99B2A722A0500A5A752 /* Frameworks */,
 				EB16D99C2A722A0500A5A752 /* Resources */,
+				4E76D7DB98F0F4DD0A736400 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2803E9081E109F6BBDC39121 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TODO-Refactor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E76D7DB98F0F4DD0A736400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB16D99A2A722A0500A5A752 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		EB16D9B32A722A0700A5A752 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA1488504C75AB3333225A71 /* Pods-TODO-Refactor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		EB16D9B42A722A0700A5A752 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
