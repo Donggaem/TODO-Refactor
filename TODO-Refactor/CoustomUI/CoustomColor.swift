@@ -16,6 +16,7 @@ class TODOColor: UIColor {
     static let gray_D1 = UIColor(hexCode: "#D1D1D1")
     static let gray_DD = UIColor(hexCode: "#DDDDDD")
     static let gray_A1 = UIColor(hexCode: "#A1A1AA")
+    static let gray_83 = UIColor(hexCode: "#838383")
     static let blue_3B = UIColor(hexCode: "#3B82F6")
     
 }
