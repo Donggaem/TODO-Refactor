@@ -21,6 +21,7 @@
 		EB2866012A72468600064523 /* ChangeRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866002A72468600064523 /* ChangeRootVC.swift */; };
 		EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866222A72508B00064523 /* CoustomTextField.swift */; };
 		EB3D63752A73A75400A6FB9B /* CoustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63742A73A75400A6FB9B /* CoustomButton.swift */; };
+		EB3D63772A754AAF00A6FB9B /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EB2866002A72468600064523 /* ChangeRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRootVC.swift; sourceTree = "<group>"; };
 		EB2866222A72508B00064523 /* CoustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomTextField.swift; sourceTree = "<group>"; };
 		EB3D63742A73A75400A6FB9B /* CoustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomButton.swift; sourceTree = "<group>"; };
+		EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
 		F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_Refactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.release.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2865FE2A7245E800064523 /* LoginViewController.swift */,
+				EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */,
+				EB3D63772A754AAF00A6FB9B /* SignUPViewController.swift in Sources */,
 				EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */,
 				EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */,
 				EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */,
