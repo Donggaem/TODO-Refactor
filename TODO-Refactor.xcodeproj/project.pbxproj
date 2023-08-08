@@ -13,6 +13,7 @@
 		EB16D9A92A722A0500A5A752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9A72A722A0500A5A752 /* Main.storyboard */; };
 		EB16D9AB2A722A0700A5A752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AA2A722A0700A5A752 /* Assets.xcassets */; };
 		EB16D9AE2A722A0700A5A752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AC2A722A0700A5A752 /* LaunchScreen.storyboard */; };
+		EB1CA99E2A81E61C00DF018B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */; };
 		EB2865EF2A7230E200064523 /* Roboto(2) in Resources */ = {isa = PBXBuildFile; fileRef = EB2865EE2A7230E200064523 /* Roboto(2) */; };
 		EB2865F32A7235B800064523 /* inter in Resources */ = {isa = PBXBuildFile; fileRef = EB2865F22A7235B800064523 /* inter */; };
 		EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865F52A7238B900064523 /* CoustomColor.swift */; };
@@ -21,7 +22,7 @@
 		EB2866012A72468600064523 /* ChangeRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866002A72468600064523 /* ChangeRootVC.swift */; };
 		EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866222A72508B00064523 /* CoustomTextField.swift */; };
 		EB3D63752A73A75400A6FB9B /* CoustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63742A73A75400A6FB9B /* CoustomButton.swift */; };
-		EB3D63772A754AAF00A6FB9B /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */; };
+		EB3D63772A754AAF00A6FB9B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63762A754AAF00A6FB9B /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EB16D9AA2A722A0700A5A752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB16D9AD2A722A0700A5A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB16D9AF2A722A0700A5A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB2865EE2A7230E200064523 /* Roboto(2) */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Roboto(2)"; sourceTree = "<group>"; };
 		EB2865F22A7235B800064523 /* inter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inter; sourceTree = "<group>"; };
 		EB2865F52A7238B900064523 /* CoustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomColor.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		EB2866002A72468600064523 /* ChangeRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRootVC.swift; sourceTree = "<group>"; };
 		EB2866222A72508B00064523 /* CoustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomTextField.swift; sourceTree = "<group>"; };
 		EB3D63742A73A75400A6FB9B /* CoustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomButton.swift; sourceTree = "<group>"; };
-		EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
+		EB3D63762A754AAF00A6FB9B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_Refactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.release.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,12 +99,21 @@
 			isa = PBXGroup;
 			children = (
 				EB2865FD2A7245C000064523 /* Login */,
+				EB1CA99C2A81E60200DF018B /* Home */,
 				EB2865F42A72387C00064523 /* CoustomUI */,
 				EB2865D22A7230A800064523 /* BaseFile */,
 				EB16D9AF2A722A0700A5A752 /* Info.plist */,
 				EB2866002A72468600064523 /* ChangeRootVC.swift */,
 			);
 			path = "TODO-Refactor";
+			sourceTree = "<group>";
+		};
+		EB1CA99C2A81E60200DF018B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EB2865D12A7230A100064523 /* Fonts */ = {
@@ -142,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2865FE2A7245E800064523 /* LoginViewController.swift */,
-				EB3D63762A754AAF00A6FB9B /* SignUPViewController.swift */,
+				EB3D63762A754AAF00A6FB9B /* SignupViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -265,10 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */,
-				EB3D63772A754AAF00A6FB9B /* SignUPViewController.swift in Sources */,
+				EB3D63772A754AAF00A6FB9B /* SignupViewController.swift in Sources */,
 				EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */,
 				EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */,
 				EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */,
+				EB1CA99E2A81E61C00DF018B /* HomeViewController.swift in Sources */,
 				EB3D63752A73A75400A6FB9B /* CoustomButton.swift in Sources */,
 				EB2865FF2A7245E800064523 /* LoginViewController.swift in Sources */,
 				EB2866012A72468600064523 /* ChangeRootVC.swift in Sources */,

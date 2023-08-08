@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SignUPViewController: UIViewController {
+class SignupViewController: UIViewController {
     
     private var label_TODO = UILabel().then {
         $0.textAlignment = .center
@@ -23,8 +23,11 @@ class SignUPViewController: UIViewController {
     private var pwTextField = CoustomTextField.coustomTextField("비밀번호를 입력하세요")
     private var pwCheckTextField = CoustomTextField.coustomTextField("비밀번호를 확인해주세요")
     
-    private var btn_Signup = CoustomButton.coustomBtn_main("회원가입")
+    private var btn_Signup = CoustomButton.coustomBtn_main("회원가입").then {
+        $0.addTarget(self, action: #selector(pressedBtn_Signup(_:)), for: .touchUpInside)
 
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +35,18 @@ class SignUPViewController: UIViewController {
         self.view.backgroundColor = TODOColor.white_FF
         
         setUI()
-
+        
     }
     
+//MARK: - objc
+    @objc func pressedBtn_Signup(_ button: UIButton) {
+        
+        let homeVC = HomeViewController()
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+//MARK: - Inner func
     private func setUI() {
         
         self.view.addSubview(label_TODO)
@@ -85,7 +97,7 @@ class SignUPViewController: UIViewController {
             make.trailing.equalToSuperview().inset(32)
         }
     }
-
+    
 }
 
 //UI 미리보기
@@ -98,7 +110,7 @@ struct ViewControllerRepresentable: UIViewControllerRepresentable {
     }
     @available(iOS 13.0.0, *)
     func makeUIViewController(context: Context) -> UIViewController{
-        SignUPViewController()
+        SignupViewController()
     }
 }
 @available(iOS 13.0, *)

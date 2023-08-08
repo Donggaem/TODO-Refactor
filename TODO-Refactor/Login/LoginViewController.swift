@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
         $0.titleLabel?.font = TODOFont.roboto_Re(10)
         $0.setTitleColor(TODOColor.gray_D1, for: .normal)
         
+        $0.addTarget(self, action: #selector(pressedBtn_Signup(_:)), for: .touchUpInside)
+        
     }
     
     private var btn_FindID = UIButton(type: .custom).then {
@@ -35,12 +37,35 @@ class LoginViewController: UIViewController {
         
     }
     
-    private var btn_Login = CoustomButton.coustomBtn_main("로그인")
+    private var btn_Login = CoustomButton.coustomBtn_main("로그인").then {
+        $0.addTarget(self, action: #selector(pressedBtn_Login(_:)), for: .touchUpInside)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = TODOColor.white_FF
         setUI()
+    }
+    
+    //MARK: - objc
+    @objc func pressedBtn_Login(_ button: UIButton) {
+        
+        let homeVC = HomeViewController()
+        self.navigationController?.changeRootViewController(homeVC)
+        
+        //        let homeVC = HomeView()
+        //        self.navigationController?.changeRootViewController(homeVC)
+        //        self.present(pushVC, animated: true, completion: nil)
+        //        self.navigationController?.pushViewController(pushVC, animated: true)
+        
+    }
+    
+    @objc func pressedBtn_Signup(_ button: UIButton) {
+        
+        let signupVC = SignupViewController()
+        self.navigationController?.pushViewController(signupVC, animated: true)
+        
     }
     
     private func setUI() {
