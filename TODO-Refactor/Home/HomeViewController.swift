@@ -6,14 +6,133 @@
 //
 
 import UIKit
+import FSCalendar
+import SnapKit
+import Then
 
 class HomeViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.view.backgroundColor = TODOColor.white_FF
-
+    
+    //날짜 포맷
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy 년 MM 월"
+        return formatter
+    }()
+    
+    private var calendarHeaderView = UIView().then {
+        $0.backgroundColor = TODOColor.white_FF
+    }
+    
+    private var label_YearMouth = UILabel().then {
+        $0.textAlignment = .center
+        $0.textColor = TODOColor.black_43
+        $0.font = TODOFont.inter_Se(18)
+    }
+    
+    private var btn_AddTodo = UIButton(type: .custom).then {
+        $0.setImage(UIImage(named: "plus"), for: .normal)
     }
 
+    private var btn_ListTodo = UIButton(type: .custom).then {
+        $0.setImage(UIImage(named: "list"), for: .normal)
+
+    }
+    
+    private var calendarView = FSCalendar()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = TODOColor.white_FF
+        
+        setCalendarUI()
+        setUI()
+    }
+    
+    private func setUI() {
+        self.view.addSubview(calendarHeaderView)
+        calendarView.addSubview(label_YearMouth)
+        calendarView.addSubview(btn_AddTodo)
+        calendarView.addSubview(btn_ListTodo)
+
+        self.view.addSubview(calendarView)
+    
+        calendarHeaderView.snp.makeConstraints { make in
+            make.width.equalTo(350)
+            make.height.equalTo(36)
+            make.top.equalToSuperview().inset(92)
+            make.leading.equalToSuperview().inset(32)
+            make.trailing.equalToSuperview().inset(32)
+        }
+        
+        label_YearMouth.snp.makeConstraints { make in
+            make.top.equalTo(calendarHeaderView.snp.top).inset(11)
+            make.bottom.equalTo(calendarHeaderView.snp.bottom).inset(4)
+            make.leading.equalTo(calendarHeaderView.snp.leading).inset(15)
+        }
+        
+        btn_AddTodo.snp.makeConstraints { make in
+            make.width.equalTo(14)
+            make.height.equalTo(14)
+            make.top.equalTo(calendarHeaderView.snp.top).inset(14)
+            make.bottom.equalTo(calendarHeaderView.snp.bottom).inset(8)
+        }
+        
+        btn_ListTodo.snp.makeConstraints { make in
+            make.width.equalTo(14)
+            make.height.equalTo(14)
+            make.top.equalTo(calendarHeaderView.snp.top).inset(14)
+            make.bottom.equalTo(calendarHeaderView.snp.bottom).inset(8)
+            make.leading.equalTo(btn_AddTodo.snp.trailing).offset(12)
+            make.trailing.equalTo(calendarHeaderView).inset(12)
+        }
+        
+        calendarView.snp.makeConstraints { make in
+            make.width.equalTo(350)
+            make.height.equalTo(240)
+            make.top.equalTo(calendarHeaderView.snp.bottom).offset(12)
+            make.leading.equalToSuperview().inset(32)
+            make.trailing.equalToSuperview().inset(32)
+
+
+            
+        }
+    }
+    
+}
+
+extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+    
+    private func setCalendarUI() {
+        
+        // delegate, dataSource
+        calendarView.delegate = self
+        calendarView.dataSource = self
+        
+        calendarView.placeholderType = .none // 전,다음달 날짜 숨기기
+        calendarView.appearance.titleDefaultColor = .gray // 평일 날짜 색깔
+        calendarView.appearance.titleWeekendColor = .gray // 주말 날짜 색깔
+        calendarView.appearance.weekdayTextColor = .gray // 요일 날짜 색깔
+        calendarView.calendarHeaderView.isHidden = true // 헤더 숨기기
+        calendarView.headerHeight = 0 // 헤더 높이 조정
+        
+        //이벤트 닷
+        calendarView.appearance.eventDefaultColor = TODOColor.blue_3B
+        calendarView.appearance.eventSelectionColor = TODOColor.blue_3B
+        
+        //오늘, 선택한 날짜색
+        calendarView.appearance.todayColor = UIColor.init(red: 0.176, green: 0.831, blue: 0.749, alpha: 1)
+        calendarView.appearance.selectionColor = TODOColor.blue_3B
+        
+        //커스텀 헤더 년 월
+        label_YearMouth.text = dateFormatter.string(from: calendarView.currentPage)
+
+        
+    }
+    
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+        label_YearMouth.text = self.dateFormatter.string(from: calendarView.currentPage)
+    }
+    
 }

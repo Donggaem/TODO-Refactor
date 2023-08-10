@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
         
     }
     
+    //MARK: - Inner func
     private func setUI() {
         self.view.addSubview(label_TODO)
         
