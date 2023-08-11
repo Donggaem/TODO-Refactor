@@ -13,6 +13,7 @@
 		EB16D9A92A722A0500A5A752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9A72A722A0500A5A752 /* Main.storyboard */; };
 		EB16D9AB2A722A0700A5A752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AA2A722A0700A5A752 /* Assets.xcassets */; };
 		EB16D9AE2A722A0700A5A752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16D9AC2A722A0700A5A752 /* LaunchScreen.storyboard */; };
+		EB1C42EC2A86234B002A6121 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C42EB2A86234B002A6121 /* TodoListTableViewCell.swift */; };
 		EB1CA99E2A81E61C00DF018B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */; };
 		EB2865EF2A7230E200064523 /* Roboto(2) in Resources */ = {isa = PBXBuildFile; fileRef = EB2865EE2A7230E200064523 /* Roboto(2) */; };
 		EB2865F32A7235B800064523 /* inter in Resources */ = {isa = PBXBuildFile; fileRef = EB2865F22A7235B800064523 /* inter */; };
@@ -34,6 +35,7 @@
 		EB16D9AA2A722A0700A5A752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB16D9AD2A722A0700A5A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB16D9AF2A722A0700A5A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1C42EB2A86234B002A6121 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
 		EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB2865EE2A7230E200064523 /* Roboto(2) */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Roboto(2)"; sourceTree = "<group>"; };
 		EB2865F22A7235B800064523 /* inter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inter; sourceTree = "<group>"; };
@@ -108,9 +110,18 @@
 			path = "TODO-Refactor";
 			sourceTree = "<group>";
 		};
+		EB1C42EA2A862333002A6121 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB1C42EB2A86234B002A6121 /* TodoListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		EB1CA99C2A81E60200DF018B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB1C42EA2A862333002A6121 /* Cell */,
 				EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -278,6 +289,7 @@
 				EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */,
 				EB3D63772A754AAF00A6FB9B /* SignupViewController.swift in Sources */,
 				EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */,
+				EB1C42EC2A86234B002A6121 /* TodoListTableViewCell.swift in Sources */,
 				EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */,
 				EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */,
 				EB1CA99E2A81E61C00DF018B /* HomeViewController.swift in Sources */,

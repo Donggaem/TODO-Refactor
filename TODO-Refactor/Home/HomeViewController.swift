@@ -33,10 +33,15 @@ class HomeViewController: UIViewController {
     private var btn_AddTodo = UIButton(type: .custom).then {
         $0.setImage(UIImage(named: "plus"), for: .normal)
     }
-
+    
     private var btn_ListTodo = UIButton(type: .custom).then {
         $0.setImage(UIImage(named: "list"), for: .normal)
-
+        
+    }
+    
+    private var tableView_TodoList = UITableView().then {
+        $0.register(TodoListTableViewCell.self, forCellReuseIdentifier: TodoListTableViewCell.identifier)
+        $0.separatorStyle = UITableViewCell.SeparatorStyle.none //테이블뷰 셀 선 없애기
     }
     
     private var calendarView = FSCalendar()
@@ -46,18 +51,26 @@ class HomeViewController: UIViewController {
         
         self.view.backgroundColor = TODOColor.white_FF
         
-        setCalendarUI()
+        addSubView()
         setUI()
+        setCalendarUI()
+        setTableView()
+        
     }
     
-    private func setUI() {
+    private func addSubView() {
         self.view.addSubview(calendarHeaderView)
         calendarView.addSubview(label_YearMouth)
         calendarView.addSubview(btn_AddTodo)
         calendarView.addSubview(btn_ListTodo)
-
+        
         self.view.addSubview(calendarView)
+        
+        self.view.addSubview(tableView_TodoList)
+    }
     
+    private func setUI() {
+        
         calendarHeaderView.snp.makeConstraints { make in
             make.width.equalTo(350)
             make.height.equalTo(36)
@@ -94,9 +107,13 @@ class HomeViewController: UIViewController {
             make.top.equalTo(calendarHeaderView.snp.bottom).offset(12)
             make.leading.equalToSuperview().inset(32)
             make.trailing.equalToSuperview().inset(32)
-
-
-            
+        }
+        
+        tableView_TodoList.snp.makeConstraints { make in
+            make.top.equalTo(calendarView.snp.bottom).offset(32)
+            make.leading.equalToSuperview().inset(32)
+            make.trailing.equalToSuperview().inset(32)
+            make.bottom.equalToSuperview().inset(44)
         }
     }
     
@@ -127,12 +144,37 @@ extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalend
         
         //커스텀 헤더 년 월
         label_YearMouth.text = dateFormatter.string(from: calendarView.currentPage)
-
+        
         
     }
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         label_YearMouth.text = self.dateFormatter.string(from: calendarView.currentPage)
+    }
+    
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    private func setTableView() {
+        tableView_TodoList.delegate = self
+        tableView_TodoList.dataSource = self
+        tableView_TodoList.rowHeight = 67
+        
+    }
+    
+    // 몇개의 Cell을 반환할지 Return하는 메소드
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    //각Row에서 해당하는 Cell을 Return하는 메소드
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: TodoListTableViewCell.identifier, for: indexPath) as! TodoListTableViewCell
+        cell.label_TodoTitle.text = "qwe"
+        cell.label_TodoContent.text = "asd"
+        return cell
     }
     
 }
