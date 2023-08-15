@@ -20,10 +20,11 @@
 		EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865F52A7238B900064523 /* CoustomColor.swift */; };
 		EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865F92A723FE100064523 /* CoustomFont.swift */; };
 		EB2865FF2A7245E800064523 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2865FE2A7245E800064523 /* LoginViewController.swift */; };
-		EB2866012A72468600064523 /* ChangeRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866002A72468600064523 /* ChangeRootVC.swift */; };
 		EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2866222A72508B00064523 /* CoustomTextField.swift */; };
 		EB3D63752A73A75400A6FB9B /* CoustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63742A73A75400A6FB9B /* CoustomButton.swift */; };
 		EB3D63772A754AAF00A6FB9B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D63762A754AAF00A6FB9B /* SignupViewController.swift */; };
+		EBD8DBD72A8B3CB700B098E5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD8DBD62A8B3CB700B098E5 /* AddViewController.swift */; };
+		EBD8DBD92A8B46CF00B098E5 /* CoustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD8DBD82A8B46CF00B098E5 /* CoustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +43,11 @@
 		EB2865F52A7238B900064523 /* CoustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomColor.swift; sourceTree = "<group>"; };
 		EB2865F92A723FE100064523 /* CoustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomFont.swift; sourceTree = "<group>"; };
 		EB2865FE2A7245E800064523 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EB2866002A72468600064523 /* ChangeRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRootVC.swift; sourceTree = "<group>"; };
 		EB2866222A72508B00064523 /* CoustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomTextField.swift; sourceTree = "<group>"; };
 		EB3D63742A73A75400A6FB9B /* CoustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomButton.swift; sourceTree = "<group>"; };
 		EB3D63762A754AAF00A6FB9B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EBD8DBD62A8B3CB700B098E5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		EBD8DBD82A8B46CF00B098E5 /* CoustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoustomTextView.swift; sourceTree = "<group>"; };
 		F2D48C0BBF9FBD763A990635 /* Pods_TODO_Refactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_Refactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5CDBE8245576C50F99BA01 /* Pods-TODO-Refactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO-Refactor.release.xcconfig"; path = "Target Support Files/Pods-TODO-Refactor/Pods-TODO-Refactor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +107,6 @@
 				EB2865F42A72387C00064523 /* CoustomUI */,
 				EB2865D22A7230A800064523 /* BaseFile */,
 				EB16D9AF2A722A0700A5A752 /* Info.plist */,
-				EB2866002A72468600064523 /* ChangeRootVC.swift */,
 			);
 			path = "TODO-Refactor";
 			sourceTree = "<group>";
@@ -123,6 +124,7 @@
 			children = (
 				EB1C42EA2A862333002A6121 /* Cell */,
 				EB1CA99D2A81E61C00DF018B /* HomeViewController.swift */,
+				EBD8DBD62A8B3CB700B098E5 /* AddViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -156,6 +158,7 @@
 				EB2865F92A723FE100064523 /* CoustomFont.swift */,
 				EB2866222A72508B00064523 /* CoustomTextField.swift */,
 				EB3D63742A73A75400A6FB9B /* CoustomButton.swift */,
+				EBD8DBD82A8B46CF00B098E5 /* CoustomTextView.swift */,
 			);
 			path = CoustomUI;
 			sourceTree = "<group>";
@@ -288,14 +291,15 @@
 			files = (
 				EB2866232A72508B00064523 /* CoustomTextField.swift in Sources */,
 				EB3D63772A754AAF00A6FB9B /* SignupViewController.swift in Sources */,
+				EBD8DBD72A8B3CB700B098E5 /* AddViewController.swift in Sources */,
 				EB2865F62A7238B900064523 /* CoustomColor.swift in Sources */,
 				EB1C42EC2A86234B002A6121 /* TodoListTableViewCell.swift in Sources */,
 				EB2865FA2A723FE100064523 /* CoustomFont.swift in Sources */,
 				EB16D9A22A722A0500A5A752 /* AppDelegate.swift in Sources */,
 				EB1CA99E2A81E61C00DF018B /* HomeViewController.swift in Sources */,
+				EBD8DBD92A8B46CF00B098E5 /* CoustomTextView.swift in Sources */,
 				EB3D63752A73A75400A6FB9B /* CoustomButton.swift in Sources */,
 				EB2865FF2A7245E800064523 /* LoginViewController.swift in Sources */,
-				EB2866012A72468600064523 /* ChangeRootVC.swift in Sources */,
 				EB16D9A42A722A0500A5A752 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

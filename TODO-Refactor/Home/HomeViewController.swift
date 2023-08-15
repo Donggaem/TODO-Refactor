@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
     
     private var btn_AddTodo = UIButton(type: .custom).then {
         $0.setImage(UIImage(named: "plus"), for: .normal)
+        $0.addTarget(self, action: #selector(pressedBtn_AddTodo(_:)), for: .touchUpInside)
+
     }
     
     private var btn_ListTodo = UIButton(type: .custom).then {
@@ -58,11 +60,19 @@ class HomeViewController: UIViewController {
         
     }
     
+//MARK: - objc
+    @objc func pressedBtn_AddTodo(_ button: UIButton) {
+        
+        let addVC = AddViewController()
+        self.navigationController?.pushViewController(addVC, animated: true)
+    }
+    
+//MARK: - Inner Func
     private func addSubView() {
         self.view.addSubview(calendarHeaderView)
-        calendarView.addSubview(label_YearMouth)
-        calendarView.addSubview(btn_AddTodo)
-        calendarView.addSubview(btn_ListTodo)
+        calendarHeaderView.addSubview(label_YearMouth)
+        calendarHeaderView.addSubview(btn_AddTodo)
+        calendarHeaderView.addSubview(btn_ListTodo)
         
         self.view.addSubview(calendarView)
         

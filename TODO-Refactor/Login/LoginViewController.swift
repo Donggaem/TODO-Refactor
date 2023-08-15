@@ -45,17 +45,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = TODOColor.white_FF
+        addSubView()
         setUI()
     }
     
-    //MARK: - objc
+//MARK: - objc
     @objc func pressedBtn_Login(_ button: UIButton) {
         
         let homeVC = HomeViewController()
-        self.navigationController?.changeRootViewController(homeVC)
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootVC(homeVC, animated: false)
         
         //        let homeVC = HomeView()
-        //        self.navigationController?.changeRootViewController(homeVC)
         //        self.present(pushVC, animated: true, completion: nil)
         //        self.navigationController?.pushViewController(pushVC, animated: true)
         
@@ -68,8 +68,10 @@ class LoginViewController: UIViewController {
         
     }
     
-    //MARK: - Inner func
-    private func setUI() {
+    
+//MARK: - Inner Func
+    private func addSubView() {
+        
         self.view.addSubview(label_TODO)
         
         self.view.addSubview(idTextField)
@@ -79,6 +81,9 @@ class LoginViewController: UIViewController {
         self.view.addSubview(btn_FindID)
         
         self.view.addSubview(btn_Login)
+        
+    }
+    private func setUI() {
         
         label_TODO.snp.makeConstraints { make in
             make.top.equalTo(self.view).inset(150)

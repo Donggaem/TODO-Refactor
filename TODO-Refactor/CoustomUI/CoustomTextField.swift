@@ -121,6 +121,101 @@ class CoustomTextField: UIView {
         
         return view
     }
+    
+    static func coustomTextField_Title(_ placeHolder: String) -> UIView {
+        
+        lazy var view = UIView().then {
+            $0.backgroundColor = TODOColor.white_FF
+        }
+        
+        lazy var textField = UITextField().then {
+            $0.font = TODOFont.roboto_Re(14)
+            $0.textColor = TODOColor.black_00
+            $0.placeholder = placeHolder
+            $0.setPlaceholderColor(TODOColor.gray_A1)
+            
+        }
+        
+        lazy var line = UIView().then {
+            $0.backgroundColor = TODOColor.blue_3B
+        }
+        
+        view.addSubview(textField)
+        view.addSubview(line)
+        
+        view.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(29)
+        }
+        
+        textField.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(19)
+            make.top.equalTo(view.snp.top).inset(0)
+            make.leading.equalTo(view.snp.leading).inset(0)
+            make.trailing.equalTo(view.snp.trailing).inset(0)
+            
+        }
+        
+        line.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(1)
+            make.top.equalTo(textField.snp.bottom).offset(8)
+            make.bottom.equalTo(view.snp.bottom).inset(0)
+            make.leading.equalTo(view.snp.leading).inset(0)
+            make.trailing.equalTo(view.snp.trailing).inset(0)
+        }
+        
+        return view
+    }
+    
+    static func coustomTextField_Date(_ placeHolder: String) -> UIView {
+        
+        lazy var view = UIView().then {
+            $0.backgroundColor = TODOColor.white_FF
+        }
+        
+        lazy var textField = UITextField().then {
+            $0.font = TODOFont.roboto_Re(14)
+            $0.textColor = TODOColor.black_00
+            $0.placeholder = placeHolder
+            $0.setPlaceholderColor(TODOColor.gray_A1)
+            
+        }
+        
+        lazy var line = UIView().then {
+            $0.backgroundColor = TODOColor.blue_3B
+        }
+        
+        view.addSubview(textField)
+        view.addSubview(line)
+        
+        view.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(29)
+        }
+        
+        textField.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(19)
+            make.top.equalTo(view.snp.top).inset(0)
+            make.leading.equalTo(view.snp.leading).inset(0)
+            make.trailing.equalTo(view.snp.trailing).inset(0)
+            
+        }
+        
+        line.snp.makeConstraints { make in
+            make.width.equalTo(326)
+            make.height.equalTo(1)
+            make.top.equalTo(textField.snp.bottom).offset(8)
+            make.bottom.equalTo(view.snp.bottom).inset(0)
+            make.leading.equalTo(view.snp.leading).inset(0)
+            make.trailing.equalTo(view.snp.trailing).inset(0)
+        }
+        
+        return view
+    }
+    
 }
 
 extension UITextField {

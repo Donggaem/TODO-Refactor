@@ -33,7 +33,7 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = TODOColor.white_FF
-        
+        addSubView()
         setUI()
         
     }
@@ -46,8 +46,8 @@ class SignupViewController: UIViewController {
         
     }
     
-//MARK: - Inner func
-    private func setUI() {
+//MARK: - Inner Func
+    private func addSubView() {
         
         self.view.addSubview(label_TODO)
         
@@ -57,6 +57,10 @@ class SignupViewController: UIViewController {
         self.view.addSubview(pwCheckTextField)
         
         self.view.addSubview(btn_Signup)
+        
+    }
+    
+    private func setUI() {
         
         label_TODO.snp.makeConstraints { make in
             make.top.equalTo(self.view).inset(150)
@@ -99,48 +103,3 @@ class SignupViewController: UIViewController {
     }
     
 }
-
-//UI 미리보기
-#if DEBUG
-import SwiftUI
-struct ViewControllerRepresentable: UIViewControllerRepresentable {
-    
-    func updateUIViewController(_ uiView: UIViewController,context: Context) {
-        // leave this empty
-    }
-    @available(iOS 13.0.0, *)
-    func makeUIViewController(context: Context) -> UIViewController{
-        SignupViewController()
-    }
-}
-@available(iOS 13.0, *)
-struct ViewControllerRepresentable_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ViewControllerRepresentable()
-                .ignoresSafeArea()
-                .previewDisplayName(/*@START_MENU_TOKEN@*/"Preview"/*@END_MENU_TOKEN@*/)
-                .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
-        }
-        
-    }
-} #endif
-
-#if DEBUG
-extension UIViewController {
-    private struct Preview: UIViewControllerRepresentable {
-        let viewController: UIViewController
-        
-        func makeUIViewController(context: Context) -> UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        }
-    }
-    
-    func toPreview() -> some View {
-        Preview(viewController: self)
-    }
-}
-#endif
